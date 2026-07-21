@@ -1,0 +1,178 @@
+/* MetroRoute Delhi Styles */
+:root {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --accent-color: #38bdf8;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+  background: #182232;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+}
+
+.brand__name { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; }
+.brand__mark { background: var(--accent-color); color: #000; font-weight: bold; padding: 4px 8px; border-radius: 6px; margin-right: 6px; }
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+.listhead h1 { font-family: var(--font-heading); margin-bottom: 6px; }
+.listhead p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.searchbar input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+}
+
+.filters { display: flex; gap: 12px; margin-bottom: 16px; }
+.filter { flex: 1; display: flex; flex-direction: column; gap: 4px; font-size: 0.85rem; color: var(--text-muted); }
+.filter select {
+  background: var(--card-bg);
+  color: #fff;
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.results__count { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+
+.station-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.station-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 14px 18px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+.station-item:hover { transform: translateY(-2px); border-color: var(--accent-color); }
+
+.badge { font-size: 0.75rem; padding: 2px 8px; border-radius: 4px; font-weight: 600; text-transform: uppercase; margin-top: 4px; display: inline-block; }
+.badge--yellow { background: #eab308; color: #000; }
+.badge--blue { background: #3b82f6; color: #fff; }
+.badge--red { background: #ef4444; color: #fff; }
+.badge--violet { background: #8b5cf6; color: #fff; }
+
+.status--open { color: #22c55e; font-weight: 600; }
+.status--limited { color: #f59e0b; font-weight: 600; }
+.status--closed { color: #ef4444; font-weight: 600; }
+
+.btn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn--ghost { background: transparent; border: 1px solid var(--border-color); color: var(--text-muted); }
+.btn--small { font-size: 0.8rem; padding: 6px 12px; }
+.btn--active { background: #16a34a; }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-backdrop[hidden] { display: none !important; }
+
+.modal {
+  background: #1e293b;
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+}
+.modal h3 { font-family: var(--font-heading); margin-bottom: 8px; }
+.modal__copy { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px; }
+.modal__hint { font-size: 0.8rem; color: var(--accent-color); margin-bottom: 12px; }
+.modal input {
+  width: 100%;
+  padding: 10px;
+  background: #0f172a;
+  border: 1px solid var(--border-color);
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+.modal__error { color: #ef4444; font-size: 0.85rem; margin-bottom: 10px; }
+.modal__actions { display: flex; justify-content: flex-end; gap: 10px; }
+
+.back-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.mod-controls {
+  margin-top: 20px;
+  padding: 16px;
+  background: #0f172a;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.mod-controls h4 { margin-bottom: 8px; color: var(--accent-color); }
+
+.footer { margin-top: 32px; border-top: 1px solid var(--border-color); padding-top: 16px; }
+.footer__disclaimer { font-size: 0.75rem; color: var(--text-muted); text-align: center; }

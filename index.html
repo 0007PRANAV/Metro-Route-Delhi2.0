@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MetroRoute Delhi — Station Status</title>
+<meta name="description" content="Delhi Metro station list and live status detail with trusted moderator reporting." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__mark">M</span>
+      <span class="brand__name">MetroRoute <em>Delhi</em></span>
+    </div>
+    <div class="user-status" id="userStatusBadge">
+      <button class="btn btn--small" id="modSignInBtn">Moderator Sign In</button>
+    </div>
+  </header>
+
+  <main class="screens" id="screens">
+
+    <!-- ============ SCREEN 1 — STATION LIST ============ -->
+    <section class="screen active" id="screen-list">
+
+      <div class="listhead">
+        <h1>Station status</h1>
+        <p>Live-style running status for stations across the network.</p>
+      </div>
+
+      <div class="searchbar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input id="searchInput" type="text" placeholder="Search stations…" autocomplete="off" aria-label="Search stations" />
+      </div>
+
+      <div class="filters">
+        <label class="filter">
+          <span class="filter__label">Line</span>
+          <select id="lineFilter" aria-label="Filter by line">
+            <option value="All">All lines</option>
+            <option value="Yellow">Yellow Line</option>
+            <option value="Blue">Blue Line</option>
+            <option value="Red">Red Line</option>
+            <option value="Violet">Violet Line</option>
+          </select>
+        </label>
+        <label class="filter">
+          <span class="filter__label">Status</span>
+          <select id="statusFilter" aria-label="Filter by status">
+            <option value="All">All statuses</option>
+            <option value="Open">Open</option>
+            <option value="Limited">Limited</option>
+            <option value="Closed">Closed</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="results__count" id="resultsCount">Showing all stations</div>
+
+      <ul class="station-list" id="stationList" role="list"></ul>
+
+      <p class="empty-state" id="emptyState" hidden>No stations match these filters.</p>
+
+    </section>
+
+    <!-- ============ SCREEN 2 — STATION DETAIL ============ -->
+    <section class="screen" id="screen-detail">
+
+      <button class="back-btn" id="backBtn" aria-label="Back to station list">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Station list
+      </button>
+
+      <div id="detailContent"><!-- injected --></div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__disclaimer">
+      Independent student project — not affiliated with or endorsed by the Delhi Metro Rail
+      Corporation (DMRC). Station status, votes and moderator names shown here are illustrative
+      demo data, not a live operational feed.
+    </p>
+  </footer>
+
+</div>
+
+<!-- moderator sign-in dialog -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h3 id="modalTitle">Moderator sign-in</h3>
+    <p class="modal__copy">
+      Only a small group of verified moderators can change a station's public status.
+      Enter the demo passcode to continue as one.
+    </p>
+    <p class="modal__hint">Demo passcode: <code>METRO2026</code></p>
+    <input id="modalPasscode" type="password" placeholder="Passcode" autocomplete="off" />
+    <p class="modal__error" id="modalError" hidden>Incorrect passcode. Try again.</p>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="modalCancel">Cancel</button>
+      <button class="btn btn--primary" id="modalConfirm">Sign in</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
