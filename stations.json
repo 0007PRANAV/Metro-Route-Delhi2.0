@@ -1,0 +1,51 @@
+[
+  {
+    "id": "rajiv-chowk",
+    "name": "Rajiv Chowk",
+    "lines": ["Blue", "Yellow"],
+    "category": "Interchange",
+    "favorite": true
+  },
+  {
+    "id": "kashmere-gate",
+    "name": "Kashmere Gate",
+    "lines": ["Red", "Yellow", "Violet"],
+    "category": "Interchange"
+  },
+  {
+    "id": "aiims",
+    "name": "AIIMS",
+    "lines": ["Yellow"],
+    "category": "Healthcare"
+  },
+  {
+    "id": "mandi-house",
+    "name": "Mandi House",
+    "lines": ["Blue", "Violet"],
+    "category": "Interchange"
+  },
+  {
+    "id": "hauz-khas",
+    "name": "Hauz Khas",
+    "lines": ["Yellow", "Magenta"],
+    "category": "Interchange"
+  },
+  {
+    "id": "dwarka-sector-21",
+    "name": "Dwarka Sector 21",
+    "lines": ["Blue", "Airport Express"],
+    "category": "Airport Link"
+  },
+  {
+    "id": "noida-electronic-city",
+    "name": "Noida Electronic City",
+    "lines": ["Blue"],
+    "category": "Terminal"
+  },
+  {
+    "id": "janakpuri-west",
+    "name": "Janakpuri West",
+    "lines": ["Blue", "Magenta"],
+    "category": "Interchange"
+  }
+]

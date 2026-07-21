@@ -1,0 +1,93 @@
+[
+  {
+    "stationId": "rajiv-chowk",
+    "status": "Open",
+    "reason": "Central interchange running normally. High footfall expected through the evening.",
+    "alternatives": ["Barakhamba Road", "Patel Chowk"],
+    "minutesAgo": 0.75,
+    "votes": { "open": 41, "limited": 3, "closed": 1 },
+    "history": [
+      { "status": "Open", "reason": "Confirmed normal service after morning inspection.", "minutesAgo": 96, "by": "Moderator — A. Sharma" },
+      { "status": "Limited", "reason": "Brief single-gate access during a security drill.", "minutesAgo": 320, "by": "Moderator — R. Verma" }
+    ]
+  },
+  {
+    "stationId": "kashmere-gate",
+    "status": "Limited",
+    "reason": "Partial platform access on the Violet Line side while an escalator is repaired.",
+    "alternatives": ["Civil Lines", "Lal Qila"],
+    "minutesAgo": 8,
+    "votes": { "open": 6, "limited": 27, "closed": 2 },
+    "history": [
+      { "status": "Limited", "reason": "Escalator taken out of service for repair; stairs still open.", "minutesAgo": 8, "by": "Moderator — P. Nair" },
+      { "status": "Open", "reason": "Full service restored after overnight maintenance.", "minutesAgo": 410, "by": "Moderator — A. Sharma" }
+    ]
+  },
+  {
+    "stationId": "aiims",
+    "status": "Open",
+    "reason": "Fully operational, no reported issues.",
+    "alternatives": ["INA", "Green Park"],
+    "minutesAgo": 2,
+    "votes": { "open": 33, "limited": 1, "closed": 0 },
+    "history": [
+      { "status": "Open", "reason": "Routine check confirms normal running.", "minutesAgo": 2, "by": "Moderator — S. Iyer" }
+    ]
+  },
+  {
+    "stationId": "mandi-house",
+    "status": "Closed",
+    "reason": "Entry and exit temporarily suspended for structural inspection near Gate 1.",
+    "alternatives": ["Janpath", "ITO"],
+    "minutesAgo": 15,
+    "votes": { "open": 2, "limited": 9, "closed": 24 },
+    "history": [
+      { "status": "Closed", "reason": "Structural inspection near Gate 1 started; station shut as a precaution.", "minutesAgo": 15, "by": "Moderator — R. Verma" },
+      { "status": "Limited", "reason": "Gate 1 restricted after a minor water leakage report.", "minutesAgo": 140, "by": "Moderator — P. Nair" }
+    ]
+  },
+  {
+    "stationId": "hauz-khas",
+    "status": "Open",
+    "reason": "Normal service across both lines.",
+    "alternatives": ["Green Park", "Panchsheel Park"],
+    "minutesAgo": 5,
+    "votes": { "open": 29, "limited": 2, "closed": 0 },
+    "history": [
+      { "status": "Open", "reason": "No disruptions reported this shift.", "minutesAgo": 5, "by": "Moderator — S. Iyer" }
+    ]
+  },
+  {
+    "stationId": "dwarka-sector-21",
+    "status": "Open",
+    "reason": "Operational and open, including Airport Express interchange.",
+    "alternatives": ["Dwarka Sector 8"],
+    "minutesAgo": 3,
+    "votes": { "open": 18, "limited": 0, "closed": 0 },
+    "history": [
+      { "status": "Open", "reason": "Confirmed normal running by station staff.", "minutesAgo": 3, "by": "Moderator — A. Sharma" }
+    ]
+  },
+  {
+    "stationId": "noida-electronic-city",
+    "status": "Limited",
+    "reason": "Reduced train frequency on this stretch during off-peak hours.",
+    "alternatives": ["Noida Sector 62"],
+    "minutesAgo": 12,
+    "votes": { "open": 4, "limited": 14, "closed": 1 },
+    "history": [
+      { "status": "Limited", "reason": "Frequency reduced as part of a scheduled off-peak timetable.", "minutesAgo": 12, "by": "Moderator — R. Verma" }
+    ]
+  },
+  {
+    "stationId": "janakpuri-west",
+    "status": "Open",
+    "reason": "Normal service across Blue and Magenta lines.",
+    "alternatives": ["Uttam Nagar East", "Tilak Nagar"],
+    "minutesAgo": 1,
+    "votes": { "open": 22, "limited": 1, "closed": 0 },
+    "history": [
+      { "status": "Open", "reason": "No issues reported since this morning.", "minutesAgo": 1, "by": "Moderator — P. Nair" }
+    ]
+  }
+]
